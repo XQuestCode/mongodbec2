@@ -2,7 +2,7 @@
 
 The aim of this task is to implement the following IoT system.
 
-![]("https://i.imgur.com/TD6sIya.png")
+![](https://i.imgur.com/TD6sIya.png)
 
 The aim of the project was to create a load-balanced MongoDB installation in Amazon EC2, with Node.js client programs simulating IoT nodes that generate sensor data. The load balancer accepts HTTP connections and balances them to EC2 instances, which are equipped with a Node.js server that receives HTTP GET requests and saves the contents to the MongoDB server. MongoDB is installed locally on an Ubuntu instance on EC2.
 
