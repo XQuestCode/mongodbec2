@@ -8,14 +8,22 @@ The aim of the project was to create a load-balanced MongoDB installation in Ama
 
 # Implementation Steps
 ## Creation of Ubuntu Instances on EC2: 
-Two Ubuntu instances were created on Amazon EC2, with inbound TCP rule for port 3000. These instances serve as the servers for the load balancer.
+Two Ubuntu instances were created on Amazon EC2, with an inbound TCP rule for port 3000. These instances serve as the servers for the load balancer.
 ## Load Balancer Configuration: 
 A load balancer was created with the following configuration:
 HTTP 3000 to HTTP 3000
 Ping path: "/"
+
+![](https://i.imgur.com/lAH394f.png)
+
 ## MongoDB Installation: 
 MongoDB 7.0 Community Edition was installed on the Ubuntu instances using the package manager. Troubleshooting errors encountered during the installation process were addressed using the troubleshooting guide.
 ## MongoDB Configuration: 
 MongoDB was configured to bind to the localhost network interface by default, meaning it can only accept connections from clients running on the same machine. Remote clients will not be able to connect to the MongoDB server.
 ## Conclusion
 The implementation of the IoT system using MongoDB in Amazon EC2 was successful. The load balancer effectively balanced HTTP connections to the EC2 instances, and the Node.js server saved the received documents to the MongoDB server. MongoDB was installed and configured properly, allowing for local connections.
+
+# Acknowledgements
+1. "Update Node.js to Version 20," HubSpot Blog, Available: https://blog.hubspot.com/website/update-node-js.
+1. "Install MongoDB Community Edition on Ubuntu," MongoDB Manual, Available: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/.
+
